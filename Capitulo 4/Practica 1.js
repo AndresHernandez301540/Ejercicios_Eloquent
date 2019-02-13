@@ -1,18 +1,19 @@
 function range(n1,n2,n3=1){
-  let numeros=[];
-  let contador=0;
+  let numbers=[];
+  //let contador=0;
   for(let i=n1;i<=n2;i+=n3){
-    numeros[contador]=i;
-    contador++;
+    //numeros[contador]=i;
+    numbers.push(i);
+  //  contador++;
   }
-  return numeros
+  return numbers
 }
 
-function sum(numeros){
-  let suma=0;
-  for(let num of numeros){
-    suma+=num;
+function sum(numbers){
+  let totalsum=0;
+  for(let num of numbers){
+    totalsum+=num;
   }
-  return suma;
+  return totalsum;
 }
 sum(range(1,10,2));

@@ -1,19 +1,17 @@
-function reverseArray(arreglo){
-  let arregloinversa=[];
-  for(let i=arreglo.length-1;i>=0;i=i-1){
-    arregloinversa.push(arreglo[i]);
+function reverseArray(array){
+  let reversedarray=[];
+  for(let i=array.length-1;i>=0;i--){
+    reversedarray.push(array[i]);
   }
-  console.log(arregloinversa);
+  return reversedarray
 }
-reverseArray([1,4,3,2]);
-
-function reverseArrayInPlace(arreglo){
+function reverseArrayInPlace(array){
   let temp=0;
-  for(let i=0;i<arreglo.length/2;i++){
-    temp=arreglo[i];
-    arreglo[i]=arreglo[arreglo.length-i-1];
-    arreglo[arreglo.length-i-1]=temp;
+  for(let i=0;i<array.length/2;i++){
+    temp=array[i];
+    array[i]=array[array.length-i-1];
+    array[array.length-i-1]=temp;
   }
-  console.log(arreglo);
+  return array
 }
 reverseArrayInPlace([1,2,3,4,5,6,7,8]);
