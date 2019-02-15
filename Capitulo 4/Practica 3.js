@@ -18,7 +18,7 @@ function prepend(list,element){
   list={value:element,rest:list};
   return list;
 }
-
+/*
 function nth(list,position){
   if(!list){
     return undefined
@@ -26,10 +26,10 @@ function nth(list,position){
     return list.value;
   }else{
     return nth(list.rest,position-1)
-  }
+  }*/
 }
 
 arrayToList([1,2,3,4]);
 listToArray(arrayToList([1,2,3,4]));
 prepend(arrayToList(([1,2,3,4])),10);
-nth((arrayToList(([1,2,3,4]))),2);
+//nth((arrayToList(([1,2,3,4]))),2);

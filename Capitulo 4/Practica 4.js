@@ -13,17 +13,18 @@ function deepEqual(object1,object2){
   if(object1keys.length!=object2keys.length){
     return false;
   }
-  for(let property in object1keys){
-    console.log(object1keys[property]);
-    console.log(object2keys[property]);
-
-    if(!(object1keys[property]===object2keys[property])){
-      return false;
+  for(let property of object1keys){
+    if(!(object2keys.includes(property)) || !(deepEqual(object1[property],object2[property]))){
+      return false
     }
   }
   return true;
 }
 let obj = {here: {is: "an"}, object: 2};
-let obj2 = {here: {is: "an"}, object: 2};
+//let obj2 = {here: {is: "an"}, object: 2};
 
-deepEqual(obj, obj2);
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
